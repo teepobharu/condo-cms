@@ -1,0 +1,34 @@
+{
+  "connection": "default",
+  "collectionName": "category",
+  "info": {
+    "name": "category",
+    "description": ""
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "vendor": {
+      "type": "string"
+    },
+    "name": {
+      "enum": [
+        "Nye By Sansiri",
+        "The Energy Hua Hin",
+        "Casa_Thapra",
+        "Casa_Ratchapruek",
+        "Tempo Grand",
+        "Teal Sathorn"
+      ],
+      "type": "enumeration"
+    },
+    "condo": {
+      "model": "condo",
+      "via": "info"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "connection": "default",
+  "collectionName": "condo",
+  "info": {
+    "name": "condo",
+    "description": "condolist"
+  },
+  "options": {
+    "timestamps": [
+      "createdAt",
+      "updatedAt"
+    ]
+  },
+  "attributes": {
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "info": {
+      "model": "category",
+      "via": "condo"
+    }
+  }
+}

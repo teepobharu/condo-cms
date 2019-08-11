@@ -1,0 +1,35 @@
+{
+  "defaultConnection": "default",
+  "connections": {
+    "default": {
+      "connector": "strapi-hook-mongoose",
+      "settings": {
+        "uri": "${process.env.DATABASE_URL || 'mongodb://condoadmin:sgBXvxNSpSJYEeUR@cluster0-shard-00-00-zrtly.mongodb.net:27017,cluster0-shard-00-01-zrtly.mongodb.net:27017,cluster0-shard-00-02-zrtly.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority'}",
+        "database": "${process.env.DATABASE_URL || 'bbbcondo'}"
+      },
+      "options": {
+        "ssl": true
+      }
+    }
+  },
+  "backup": {
+    "defaultConnection": "default",
+    "connections": {
+      "default": {
+        "connector": "strapi-hook-mongoose",
+        "settings": {
+          "database": "bbb-condo",
+          "host": "127.0.0.1",
+          "srv": false,
+          "port": 27017,
+          "username": "",
+          "password": ""
+        },
+        "options": {
+          "authenticationDatabase": "",
+          "ssl": false
+        }
+      }
+    }
+  }
+}
